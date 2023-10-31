@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blogly - User Listing</title>
+</head>
+<body>
+    <h1>Blogly - User Listing</h1>
+    <ul>
+        <li>
+            <a href="/users/1">Maple Adame</a>
+        </li>
+        <li>
+            <a href="/users/2">Rou Adame</a>
+        </li>
+        <!-- Add more user entries as needed -->
+    </ul>
+    <a href="/users/new">Create User</a>
+
+    <!-- New User Form -->
+    <h2>Create User</h2>
+    <form action="/users/new" method="POST">
+        <label for="first_name">First Name:</label>
+        <input type="text" name="first_name" id="first_name" required><br>
+        <label for="last_name">Last Name:</label>
+        <input type="text" name="last_name" id="last_name" required><br>
+        <label for="image_url">Image URL:</label>
+        <input type="text" name="image_url" id="image_url"><br>
+        <button type="submit">Save</button>
+    </form>
+
+    <!-- User Detail Page -->
+    <h2>User Details</h2>
+    <img src="User's Image URL" alt="User's Image">
+    <p>First Name: User's First Name</p>
+    <p>Last Name: User's Last Name</p>
+    <a href="/users/1/edit">Edit User</a>
+    <form action="/users/1/delete" method="POST">
+        <button type="submit">Delete User</button>
+    </form>
+
+    <!-- Edit User Page -->
+    <h2>Edit User</h2>
+    <form action="/users/1/edit" method="POST">
+        <label for="first_name">First Name:</label>
+        <input type="text" name="first_name" id="first_name" required><br>
+        <label for="last_name">Last Name:</label>
+        <input type="text" name="last_name" id="last_name" required><br>
+        <label for="image_url">Image URL:</label>
+        <input type="text" name="image_url" id="image_url"><br>
+        <button type="submit">Save</button>
+        <a href="/users/1">Cancel</a>
+    </form>
+</body>
+</html>
